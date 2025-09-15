@@ -1,0 +1,50 @@
+1. Docker, docker-compose là gì?
+*Docker
+- Docker là nền tảng open source để phát triển, đóng gói và chạy ứng dụng trở nên dễ dàng, nhanh hơn bằng cách sử dụng docker container chứa all dependencies, config, code, library, system tools,... Docker giúp tách biệt ứng dụng khỏi hạ tầng, nhờ đó có thể triển khai phần mềm nhanh hơn. -> deploy dễ dàng.
+-> hữu ích trong nhiều trường hợp như sử dụng OS khác nhau, dev sử dụng phiên bản ngôn ngữ lập trình khác nhau, deploy nhanh khônh tốn time cài thư viện...
+
+* Docker-compose
+- Là một công cụ của docker giúp định nghĩa và chạy nhiều container cùng lúc. Một ứng dụng thực tế gồm nhiều thành phần khác nhau, nếu dùng docker run thì phải chạy thủ công từng container. Với docker-compose, ta có thể khai báo toàn bộ hệ thống trong 1 file. -> dễ quản lý các container, việc triển khai hệ thống dễ dàng.
+
+2.Linux vs Unix vs BSD hay *nix? macOS thuộc loại?
+* Unix
+- Xuất hiện từ những năm 1970, Unix là hệ điều hành gốc(nền tảng cho các hđh khác), từ đó sinh ra nhiều nhánh khác. Nó là hệ điều hành đa nền tảng, có ảnh hưởng sâu rộng đến Linux và nhiều hệ điều hành hiện đại. Unix ổn định, bảo mật tốt nhưng không open.
+
+* BSD
+- BSD là 1 nhánh của UNIX được phát triển vào năm 1977. BSD có tính chất mở, điều này cho phép bất kỳ ai sử dụng, chỉnh sửa, và thậm chí tích hợp vào sản phẩm thương mại. Sau này BSD tách riêng thành nhiều hệ điều hành mã nguồn mở: FreeBSD, OpenBSD, NetBSD.
+->macOS là hệ điều hành thương mại của Apple xây dựng trên Darwin, mà Darwin lại dựa trên FreeBSD và NeXTSTEP, vì vậy macOS là hệ điều hành vừa có gốc từ BSD, vừa được công nhận chính thức là UNIX.
+
+*Linux
+- Linux ra đời vào 1991, là 1 hệ điều hành mã nguồn mở dạng UNIX.
+- Đặc điểm chính:
+	+ Linux về mặt kỹ thuật là kernel của hệ điều hành, quản lý phần cứng, bộ nhớ.
+	+ Mã nguồn của Linux được phát hành dưới GNU General Public License, ai cũng có thể xem, sửa, 	phân phối dưới license.
+	+ Có nhiều bản phân phối Linux khác nhau: Ubunti, Debian,...
+
+* *nix
+- *nix là UNIX và tất cả các biến thể hđh tương tự UNIX
++ UNIX chính thống: macOS, AIX,...
++ UNIX-like: Linux, BSD,...
+
+3. Alpine vs Ubuntu
+* Alpine
+- Alpine là distribution của Linux, nó phổ biến vì tối giản, nhẹ, bảo mật và thường được dùng trong các container.
+
+*Ubuntu
+- Ubuntu cũng là 1 distribution phổ biến khác của Linux. Nó dựa trên Debian, có giao diện đồ họa đẹp, dễ dùng cho người mới, phổ biến trong cộng đồng open-source và doanh nghiệp.
+
+* Alpine vs Ubuntu
+Category		Alpine				Ubuntu
+size			Nhỏ				Lớn hơn, nếu cài desktop thì lớn hơn nhiều
+triết lý thiết kế	nhẹ, tối giản			nhiều tính năng, thân thiện user
+usability		khó cho người mới		thân thiện, nhanh chóng làm quen và thành thạo.
+hiệu suất		khởi động nhanh, ngốn ít RAM	Nặng hơn Alpine, phù hợp tối ưu server lớn.
+=> dùng Alpine khi: muốn docker image nhẹ, deploy nhanh, chạy microservices, hướng tới bảo mật và sự tối giản.
+=> Dùng ubuntu: môi trường phát triển quen thuộc, cần nhiều package sắn, tương thích cao, dễ dùng cho người mới vs Linux.
+
+4. VNC
+- Stand for:Virtual Network Computing, là công nghệ cho phép điều khiển máy tính remote thoogn qua GUI.
+- VNC hoạt động dựa trên Remote FrameBuffer protocol.
+- Khi dùng VNC, VNC server chạy trên máy chủ, VNC client chạy trên máy mà mình dùng để kết nối, màn hình của server được chụp lại để gửi đến client giúp ta thấy giao diện desktop từ xa. Các input từ bàn phím, chuột từ client được gửi ngược lại server. 
+- VNC có thể hoạt động đa nền tảng, là open-source. VNC truyền từng pixel của màn hình còn remote desktop thì gửi lệnh đồ họa.
+-> dùng cho quản trị từ xa, IT helpdesk, remote work.

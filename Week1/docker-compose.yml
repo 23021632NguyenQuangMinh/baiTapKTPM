@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  desktop:
+    build: .
+    container_name: my_desktop
+    ports:
+      - "2222:22"
+      - "5901:5901"
+    shm_size: "2gb"
